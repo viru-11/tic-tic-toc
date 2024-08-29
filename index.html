@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Signup and Login Screen -->
+    <div id="auth-screen">
+        <h1>Tic-Tac-Toe</h1>
+        <div id="signup-form">
+            <input type="text" id="signup-username" placeholder="Username">
+            <input type="password" id="signup-password" placeholder="Password">
+            <button onclick="signup()">Sign Up</button>
+        </div>
+        <div id="login-form" class="hidden">
+            <input type="text" id="login-username" placeholder="Username">
+            <input type="password" id="login-password" placeholder="Password">
+            <button onclick="login()">Login</button>
+        </div>
+        <p>
+            Already have an account? <span id="toggle-login" onclick="toggleAuthForms()">Login</span>
+        </p>
+    </div>
+
+    <!-- Player Name Input Screen -->
+    <div id="login-screen" class="hidden">
+        <h1>Tic-Tac-Toe</h1>
+        <input type="text" id="player1" placeholder="Enter Player 1 Name">
+        <input type="text" id="player2" placeholder="Enter Player 2 Name">
+        <button onclick="startGame()">Start Game</button>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="hidden">
+        <h2 id="current-player">Player 1's Turn</h2>
+        <div id="board">
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+        </div>
+    </div>
+
+    <!-- Result Screen -->
+    <div id="result-screen" class="hidden">
+        <h2 id="result-message"></h2>
+        <button onclick="newGame()">New Game</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

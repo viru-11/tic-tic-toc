@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #6a0dad, #8a2be2);
+    color: white;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+#auth-screen, #login-screen, #game-screen, #result-screen {
+    width: 100%;
+    max-width: 400px;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: #6a0dad;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #dcdcdc;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+p {
+    margin-top: 20px;
+}
+
+#toggle-login {
+    color: #ffcc00;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#toggle-login:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 400px) {
+    .cell {
+        width: 80px;
+        height: 80px;
+    }
+
+    input, button {
+        width: 100%;
+    }
+}
